@@ -20,16 +20,6 @@ export const Btn = styled.button`
 export const ContactsEl = styled.li`
   background-color: #f0ecec;
 
-  border-top: 0.2px solid #fffcfc;
-  &:not(:last-child) {
-    border-right: 0.2px solid #ffffff;
-  }
-  &:last-child {
-    border-bottom-right-radius: 6px;
-  }
-  &:first-child {
-    border-bottom-left-radius: 6px;
-  }
   padding: 0px 15px 0px 10px;
   display: flex;
   justify-content: space-between;

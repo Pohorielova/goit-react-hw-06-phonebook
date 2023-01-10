@@ -5,7 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(250, 248, 242);
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.3984944319524685) 100%,
+      rgba(0, 0, 0, 0.4125000341933649) 100%
+    ),
+    url('./components/99px_ru_wallpaper_200868_mnogo_listev_paporotnika.jpg');
 }
 
 code {

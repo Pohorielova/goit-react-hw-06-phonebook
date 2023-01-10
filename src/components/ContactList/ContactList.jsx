@@ -11,6 +11,7 @@ const ContactList = ({ contacts, onDeleteContact }) => (
     justifyContent="center"
     alignContent="flex-start"
     ml={45}
+    gridGap={10}
   >
     {contacts.map(({ id, name, number }) => (
       <ContactsEl key={id}>

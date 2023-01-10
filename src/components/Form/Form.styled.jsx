@@ -15,6 +15,7 @@ export const Label = styled.label`
   font-weight: 700;
   font-size: 20px;
   margin-bottom: 10px;
+  color: white;
 `;
 export const Btn = styled.button`
   background-color: yellowgreen;

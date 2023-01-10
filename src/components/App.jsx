@@ -53,7 +53,9 @@ export default function App() {
 
   return (
     <Box as="div" p={15}>
-      <h1>Phonebook</h1>
+      <Box as="h1" color="white">
+        Phonebook
+      </Box>
       <Box as="div" display="flex" alignItems="center">
         <Box as="div" display="flex" flexDirection="column" width={320}>
           <Form onSubmitForm={addName} contacts={visibleContacts} />
