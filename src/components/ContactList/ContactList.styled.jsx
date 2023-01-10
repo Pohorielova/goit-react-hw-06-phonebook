@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Btn = styled.button`
-  background-color: plum;
+  background-color: #a3125f;
   border: none;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   color: white;
@@ -12,14 +12,14 @@ export const Btn = styled.button`
   padding: 10px;
   margin-left: 15px;
   cursor: pointer;
-
+  &:hover,
   &:active {
-    background-color: deeppink;
+    background-color: plum;
   }
 `;
 export const ContactsEl = styled.li`
-  background-color: #f0ecec;
-
+  background-color: #5c0a4995;
+  color: white;
   padding: 0px 15px 0px 10px;
   display: flex;
   justify-content: space-between;
