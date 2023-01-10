@@ -14,7 +14,7 @@ export const Btn = styled.button`
   cursor: pointer;
   &:hover,
   &:active {
-    background-color: plum;
+    background-color: orange;
   }
 `;
 export const ContactsEl = styled.li`

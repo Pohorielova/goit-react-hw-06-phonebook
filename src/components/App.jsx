@@ -53,8 +53,8 @@ export default function App() {
 
   return (
     <Box as="div" p={15}>
-      <Box as="h1" color="white">
-        Phonebook
+      <Box as="h1" color="white" textAlign="center">
+        PhoneBook:
       </Box>
       <Box as="div" display="flex" alignItems="center">
         <Box as="div" display="flex" flexDirection="column" width={320}>

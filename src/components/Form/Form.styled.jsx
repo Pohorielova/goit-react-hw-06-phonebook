@@ -34,7 +34,7 @@ export const Btn = styled.button`
   cursor: pointer;
   &:hover,
   &:active {
-    background-color: #bc7a00;
+    background-color: #a3125f;
   }
 `;
 
