@@ -1,5 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { add, remove, setFilter } from '../redux/appSlice';
+import {
+  add,
+  remove,
+  setFilter,
+  getContacts,
+  getFilter,
+} from '../redux/appSlice';
 import { Box } from './Box';
 import shortid from 'shortid';
 import Form from './Form/Form';
@@ -8,8 +14,8 @@ import Filter from './Filter/Filter';
 
 export default function App() {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.phonebook.contacts.items);
-  const filter = useSelector(state => state.phonebook.contacts.filter);
+  const contacts = useSelector(getContacts);
+  const filter = useSelector(getFilter);
   // const [contacts, setContacts] = useState(
   //   JSON.parse(localStorage.getItem('contacts')) ?? []
   // );
