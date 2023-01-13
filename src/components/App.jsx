@@ -1,7 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-// import { useState } from 'react';
-import { add, removeId } from '../redux/contactsSlice';
-import { setFilter, getFilter } from 'redux/filterSlice';
+import { add, remove, setFilter } from '../redux/appSlice';
 import { Box } from './Box';
 import shortid from 'shortid';
 import Form from './Form/Form';
@@ -10,8 +8,8 @@ import Filter from './Filter/Filter';
 
 export default function App() {
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts);
-  const filter = useSelector(getFilter);
+  const contacts = useSelector(state => state.phonebook.contacts.items);
+  const filter = useSelector(state => state.phonebook.contacts.filter);
   // const [contacts, setContacts] = useState(
   //   JSON.parse(localStorage.getItem('contacts')) ?? []
   // );
@@ -20,7 +18,7 @@ export default function App() {
   // useEffect(() => {
   //   localStorage.setItem('contacts', JSON.stringify(contacts));
   // }, [contacts]);
-
+  // console.log(contacts);
   const addName = data => {
     const contact = {
       id: shortid.generate(),
@@ -53,13 +51,13 @@ export default function App() {
     //   prevState.filter(contact => contact.id !== contactId)
     // );
 
-    dispatch(removeId(contactId));
+    dispatch(remove(contactId));
   };
 
   const getVisibleContacts = () => {
-    // const normalizedFilter = filter.toLowerCase();
+    const normalizedFilter = filter.toLowerCase();
     return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter)
+      contact.name.toLowerCase().includes(normalizedFilter)
     );
   };
 
